@@ -1,0 +1,31 @@
+{
+  "name": "azafo-portifolio",
+  "version": "1.0.0",
+  "description": "This This page is Azafo Alexandre Cossa's portfolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w sass -o dist/css --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AzafoCossa/cossa.online.git"
+  },
+  "keywords": [
+    "Portfolio",
+    "Services",
+    "Personal",
+    "Web",
+    "Page",
+    "HTML",
+    "CSS"
+  ],
+  "author": "Azafo Cossa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AzafoCossa/cossa.online/issues"
+  },
+  "homepage": "https://github.com/AzafoCossa/cossa.online#readme",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
