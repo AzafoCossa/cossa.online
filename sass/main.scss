@@ -10,10 +10,9 @@
 body {
   font-family: $roboto;
   overflow-y: auto;
-  overflow-x: hidden;
 }
 .wrapper {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   background-color: $dark;
 }
@@ -43,11 +42,11 @@ nav {
           font-weight: 400;
 
           &:hover {
-            border-bottom: 5px solid $danger;
+            border-bottom: 5px solid $yellow;
           }
 
           &.active {
-            border-bottom: 5px solid $danger;
+            border-bottom: 5px solid $yellow;
           }
         }
       }
@@ -58,7 +57,7 @@ nav {
 .social-box {
   position: fixed;
   width: 50px;
-  height: 250px;
+  height: 300px;
   bottom: 0;
   z-index: 100;
 
@@ -204,6 +203,164 @@ nav {
         margin-top: 10px;
         color: $white;
       }
+    }
+  }
+}
+
+.cover {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-box {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    background: lighten($dark, 5);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .middle-line {
+    height: 100%;
+    width: 20px;
+    background-color: $danger;
+    position: absolute;
+    left: 48%;
+  }
+
+  .top-triangle {
+    background-color: $danger;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 5;
+    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
+    top: 0;
+    left: 0;
+  }
+
+  .bottom-triangle {
+    background-color: $danger;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 5;
+    -webkit-clip-path: polygon(100% 100%, 0% 100%, 100% 0);
+    clip-path: polygon(100% 100%, 0% 100%, 100% 0);
+    bottom: 0;
+    right: 0;
+  }
+
+  &-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    div {
+      padding: 20px;
+
+      h3 {
+        color: $yellow;
+        font-size: 3rem;
+      }
+      p {
+        margin: 10px 0;
+        font-size: 1.1rem;
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
+.projects {
+  width: 100%;
+  min-height: 100vh;
+  background-color: lighten($dark, 9);
+  padding: 20px;
+
+  &-header {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  &-title {
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid $danger;
+  }
+
+  &-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 40px 0;
+  }
+
+  .project {
+    &-card {
+      margin: 60px 0;
+      width: 100%;
+      height: 350px;
+      padding: 20px;
+      display: grid;
+      &:nth-child(even) {
+        grid-template-columns: 40% 60%;
+      }
+
+      &:nth-child(odd) {
+        grid-template-columns: 40% 60%;
+        grid-auto-flow: dense;
+        direction: rtl;
+
+        .project-description {
+          grid-auto-flow: column;
+          direction: ltr;
+          text-align: right;
+        }
+      }
+    }
+    &-title {
+      margin: 20px 0;
+      font-size: 1.4rem;
+      color: #fff;
+    }
+
+    &-tech {
+      ul {
+        position: relative;
+        list-style: none;
+        display: flex;
+        li {
+          margin: 20px 10px;
+
+          color: #fff;
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    &-description {
+      position: relative;
+      border-radius: 10px;
+      background-color: $dark;
+      border: 2px solid $blue;
+      margin-top: 40px;
+      padding: 30px;
+      width: 600px;
+      height: 150px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+      line-height: 1.6;
     }
   }
 }

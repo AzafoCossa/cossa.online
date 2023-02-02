@@ -5,3 +5,24 @@
   overflow: hidden;
   padding: 0 2rem;
 }
+
+.btn {
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  &:hover {
+    cursor: pointer;
+  }
+
+  &-yellow {
+    background-color: $yellow;
+
+    &:hover {
+      background-color: darken($yellow, 8);
+    }
+  }
+}

@@ -10,13 +10,27 @@
   overflow: hidden;
   padding: 0 2rem; }
 
+.btn {
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-weight: 700; }
+  .btn:hover {
+    cursor: pointer; }
+  .btn-yellow {
+    background-color: #ffb20f; }
+    .btn-yellow:hover {
+      background-color: #e59c00; }
+
 body {
   font-family: "Roboto", sans-serif;
-  overflow-y: auto;
-  overflow-x: hidden; }
+  overflow-y: auto; }
 
 .wrapper {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   background-color: #000000; }
 
@@ -39,14 +53,14 @@ nav {
           font-size: 1.3rem;
           font-weight: 400; }
           nav .navbar ul li a:hover {
-            border-bottom: 5px solid #a81620; }
+            border-bottom: 5px solid #ffb20f; }
           nav .navbar ul li a.active {
-            border-bottom: 5px solid #a81620; }
+            border-bottom: 5px solid #ffb20f; }
 
 .social-box {
   position: fixed;
   width: 50px;
-  height: 250px;
+  height: 300px;
   bottom: 0;
   z-index: 100; }
   .social-box ul {
@@ -148,3 +162,121 @@ nav {
         font-size: 1.5rem;
         margin-top: 10px;
         color: #ffffff; }
+
+.cover {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .cover-box {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    background: #0d0d0d;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
+  .cover .middle-line {
+    height: 100%;
+    width: 20px;
+    background-color: #a81620;
+    position: absolute;
+    left: 48%; }
+  .cover .top-triangle {
+    background-color: #a81620;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 5;
+    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
+    top: 0;
+    left: 0; }
+  .cover .bottom-triangle {
+    background-color: #a81620;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 5;
+    -webkit-clip-path: polygon(100% 100%, 0% 100%, 100% 0);
+    clip-path: polygon(100% 100%, 0% 100%, 100% 0);
+    bottom: 0;
+    right: 0; }
+  .cover-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #fff; }
+    .cover-content div {
+      padding: 20px; }
+      .cover-content div h3 {
+        color: #ffb20f;
+        font-size: 3rem; }
+      .cover-content div p {
+        margin: 10px 0;
+        font-size: 1.1rem;
+        line-height: 1.4; }
+
+.projects {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #171717;
+  padding: 20px; }
+  .projects-header {
+    width: 60%;
+    margin: 0 auto; }
+  .projects-title {
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #a81620; }
+  .projects-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 40px 0; }
+  .projects .project-card {
+    margin: 60px 0;
+    width: 100%;
+    height: 350px;
+    padding: 20px;
+    display: grid; }
+    .projects .project-card:nth-child(even) {
+      grid-template-columns: 40% 60%; }
+    .projects .project-card:nth-child(odd) {
+      grid-template-columns: 40% 60%;
+      grid-auto-flow: dense;
+      direction: rtl; }
+      .projects .project-card:nth-child(odd) .project-description {
+        grid-auto-flow: column;
+        direction: ltr;
+        text-align: right; }
+  .projects .project-title {
+    margin: 20px 0;
+    font-size: 1.4rem;
+    color: #fff; }
+  .projects .project-tech ul {
+    position: relative;
+    list-style: none;
+    display: flex; }
+    .projects .project-tech ul li {
+      margin: 20px 10px;
+      color: #fff;
+      font-size: 0.8rem; }
+  .projects .project-description {
+    position: relative;
+    border-radius: 10px;
+    background-color: #000000;
+    border: 2px solid #348899;
+    margin-top: 40px;
+    padding: 30px;
+    width: 600px;
+    height: 150px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    line-height: 1.6; }
