@@ -290,7 +290,7 @@ nav {
 
   &-title {
     text-align: center;
-    color: #fff;
+    color: $yellow;
     font-weight: 700;
     font-size: 2rem;
     margin-top: 30px;
@@ -339,7 +339,7 @@ nav {
     &-title {
       margin: 20px 0;
       font-size: 1.4rem;
-      color: #fff;
+      color: $yellow;
     }
 
     &-tech {
@@ -370,6 +370,107 @@ nav {
       align-items: center;
       font-size: 0.9rem;
       line-height: 1.6;
+    }
+  }
+}
+
+.experiences {
+  min-height: 100vh;
+  width: 100%;
+  margin: 40px 0;
+
+  &-header {
+    font-size: 2.3rem;
+    color: $yellow;
+    padding: 20px;
+    border-bottom: 2px solid $danger;
+  }
+
+  .experience {
+    max-width: 750px;
+    margin: 40px auto;
+    color: #fff;
+
+    &-title {
+      font-size: 1.2rem;
+      color: $yellow;
+      .position {
+        color: #fff;
+      }
+    }
+
+    &-dates {
+      font-size: 0.9rem;
+      color: $danger;
+    }
+
+    &-content {
+      margin: 30px 0;
+    }
+
+    &-list {
+      list-style: none;
+
+      li {
+        margin: 20px 0;
+        font-weight: 400;
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+      .icon {
+        margin-right: 5px;
+        color: $yellow;
+      }
+    }
+
+    &-divider {
+      max-width: 150px;
+      height: 2px;
+      background-color: $danger;
+    }
+  }
+}
+
+.contact {
+  margin: 40px;
+
+  &-header {
+    color: #fff;
+    text-align: center;
+    max-width: 600px;
+    margin: 40px auto;
+
+    .title {
+      font-size: 2rem;
+      margin: 10px;
+    }
+  }
+
+  &-form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 10px;
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      input,
+      textarea {
+        margin: 10px 0;
+        border-radius: 10px;
+        padding: 20px 10px;
+        outline: none;
+        border: none;
+
+        &::placeholder {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    .btn {
+      text-align: center;
     }
   }
 }

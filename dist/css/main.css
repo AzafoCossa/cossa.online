@@ -228,7 +228,7 @@ nav {
     margin: 0 auto; }
   .projects-title {
     text-align: center;
-    color: #fff;
+    color: #ffb20f;
     font-weight: 700;
     font-size: 2rem;
     margin-top: 30px;
@@ -263,7 +263,7 @@ nav {
   .projects .project-title {
     margin: 20px 0;
     font-size: 1.4rem;
-    color: #fff; }
+    color: #ffb20f; }
   .projects .project-tech ul {
     position: relative;
     list-style: none;
@@ -286,3 +286,72 @@ nav {
     align-items: center;
     font-size: 0.9rem;
     line-height: 1.6; }
+
+.experiences {
+  min-height: 100vh;
+  width: 100%;
+  margin: 40px 0; }
+  .experiences-header {
+    font-size: 2.3rem;
+    color: #ffb20f;
+    padding: 20px;
+    border-bottom: 2px solid #a81620; }
+  .experiences .experience {
+    max-width: 750px;
+    margin: 40px auto;
+    color: #fff; }
+    .experiences .experience-title {
+      font-size: 1.2rem;
+      color: #ffb20f; }
+      .experiences .experience-title .position {
+        color: #fff; }
+    .experiences .experience-dates {
+      font-size: 0.9rem;
+      color: #a81620; }
+    .experiences .experience-content {
+      margin: 30px 0; }
+    .experiences .experience-list {
+      list-style: none; }
+      .experiences .experience-list li {
+        margin: 20px 0;
+        font-weight: 400;
+        font-size: 0.9rem;
+        line-height: 1.5; }
+      .experiences .experience-list .icon {
+        margin-right: 5px;
+        color: #ffb20f; }
+    .experiences .experience-divider {
+      max-width: 150px;
+      height: 2px;
+      background-color: #a81620; }
+
+.contact {
+  margin: 40px; }
+  .contact-header {
+    color: #fff;
+    text-align: center;
+    max-width: 600px;
+    margin: 40px auto; }
+    .contact-header .title {
+      font-size: 2rem;
+      margin: 10px; }
+  .contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 10px; }
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      width: 100%; }
+      .contact-form form input,
+      .contact-form form textarea {
+        margin: 10px 0;
+        border-radius: 10px;
+        padding: 20px 10px;
+        outline: none;
+        border: none; }
+        .contact-form form input::placeholder,
+        .contact-form form textarea::placeholder {
+          font-size: 1.2rem; }
+    .contact-form .btn {
+      text-align: center; }
