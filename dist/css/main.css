@@ -16,12 +16,15 @@
   border: none;
   display: inline-block;
   border-radius: 5px;
+  text-decoration: none;
   font-size: 1.6rem;
-  font-weight: 700; }
+  font-weight: 700;
+  color: #fff; }
   .btn:hover {
     cursor: pointer; }
   .btn-yellow {
-    background-color: #ffb20f; }
+    background-color: #ffb20f;
+    color: #000; }
     .btn-yellow:hover {
       background-color: #e59c00; }
 
@@ -106,7 +109,7 @@ nav {
     position: relative;
     width: 800px;
     height: 400px;
-    margin-top: 80px;
+    margin: 80px 0;
     background: #0d0d0d; }
     .about-box .top-line {
       position: absolute;
@@ -165,7 +168,7 @@ nav {
 
 .cover {
   width: 100%;
-  height: 100vh;
+  margin: 80px 0;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -355,3 +358,48 @@ nav {
           font-size: 1.2rem; }
     .contact-form .btn {
       text-align: center; }
+
+@media screen and (max-width: 910px) {
+  .social-box {
+    display: none; } }
+
+@media screen and (orientation: portrait) and (max-width: 660px) {
+  .about-box {
+    height: 100%;
+    width: 100%; }
+    .about-box .content {
+      margin-top: 10px;
+      display: block;
+      padding: 20px;
+      height: 100%;
+      width: 100%; }
+  .cover-box {
+    grid-template-columns: 1fr;
+    height: 100%; }
+    .cover-box .cover-image {
+      height: 350px; }
+    .cover-box .middle-line {
+      display: none; } }
+
+@media screen and (orientation: portrait) and (max-width: 414px) {
+  .about-box {
+    height: 100%;
+    width: 100%;
+    margin: 30px 0; }
+    .about-box .content .content-text h1 {
+      font-size: 2.3rem; }
+    .about-box .content .content-text h3 {
+      font-size: 1.2rem; }
+    .about-box .content .content-text p {
+      font-size: 1.2rem; } }
+
+@media screen and (orientation: portrait) {
+  .cover {
+    margin: 20px 0; }
+  .experiences {
+    min-height: 100%;
+    margin: 20px 0; }
+  .projects {
+    min-height: 100%; }
+  .contact {
+    margin: 0; } }

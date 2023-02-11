@@ -12,14 +12,17 @@
   border: none;
   display: inline-block;
   border-radius: 5px;
+  text-decoration: none;
   font-size: 1.6rem;
   font-weight: 700;
+  color: #fff;
   &:hover {
     cursor: pointer;
   }
 
   &-yellow {
     background-color: $yellow;
+    color: #000;
 
     &:hover {
       background-color: darken($yellow, 8);
