@@ -5,6 +5,9 @@
 }
 
 @media screen and(orientation:portrait) {
+  .projects {
+    min-height: 100%;
+  }
   @media screen and(max-width:660px) {
     .about-box {
       height: 100%;
@@ -27,6 +30,80 @@
 
       .middle-line {
         display: none;
+      }
+    }
+
+    .projects {
+      width: 100%;
+      display: block;
+      margin: 0;
+      min-height: 100%;
+      padding: 0;
+
+      &-header {
+        max-width: 100%;
+        display: block;
+        padding: 10px 0;
+      }
+      &-title {
+        font-size: 1.5rem;
+      }
+
+      &-cards {
+        padding: 0;
+        display: block;
+        width: 100%;
+        margin: 0;
+      }
+
+      .project {
+        &-card {
+          width: 100%;
+          display: flex;
+          height: 100%;
+          margin: 0;
+          flex-direction: column;
+
+          a div {
+            width: 100%;
+            height: 250px;
+            // border-radius: 10px;
+          }
+          &:nth-child(even) {
+            // grid-template-columns: 100%;
+          }
+
+          &:nth-child(odd) {
+            // grid-template-columns: 40% 60%;
+            // grid-auto-flow: dense;
+            direction: ltr;
+
+            .project-description {
+              // grid-auto-flow: column;
+              direction: ltr;
+              text-align: left;
+            }
+          }
+        }
+
+        &-tech {
+          ul {
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+              padding: 0;
+              margin: 10px;
+            }
+          }
+        }
+
+        &-description {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          padding: 10px;
+        }
       }
     }
   }
@@ -60,11 +137,6 @@
     min-height: 100%;
     margin: 20px 0;
   }
-
-  .projects {
-    min-height: 100%;
-  }
-
   .contact {
     margin: 0;
   }
