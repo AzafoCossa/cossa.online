@@ -20,8 +20,11 @@ body {
 nav {
   //   background-color: $danger;
   padding: 10px 0;
-
+  color: #fff;
   .navbar {
+    &-toggler {
+      display: none;
+    }
     display: flex;
     justify-content: space-between;
     align-items: center;

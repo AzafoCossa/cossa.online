@@ -9,6 +9,43 @@
     min-height: 100%;
   }
   @media screen and(max-width:660px) {
+    nav .navbar {
+      &-toggler {
+        display: block;
+        z-index: 5555;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+      ul {
+        // display: none;
+        position: absolute;
+        width: 100%;
+        min-height: 100%;
+        padding: 70px;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        right: 0;
+        align-items: center;
+        background: rgba(52, 136, 153, 0.7);
+        z-index: 555;
+        display: none;
+        &.show {
+          display: block;
+        }
+
+        li {
+          text-align: center;
+          padding: 10px 0;
+          border-bottom: 2px solid #fff;
+
+          &:hover {
+            background-color: darken($color: #348899, $amount: 0.8);
+          }
+        }
+      }
+    }
     .about-box {
       height: 100%;
       width: 100%;
